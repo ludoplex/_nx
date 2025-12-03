@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puter Game Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>🎮 Puter Game Hub</h1>
+    </header>
+
+    <!-- Auth Section -->
+    <section id="auth-section" class="section">
+      <button id="auth-btn" class="btn btn-primary">Sign In with Puter</button>
+      <div id="user-info" class="user-info hidden">
+        <span id="username"></span>
+        <button id="signout-btn" class="btn btn-secondary">Sign Out</button>
+      </div>
+    </section>
+
+    <!-- Chat Section -->
+    <section id="chat-section" class="section hidden">
+      <h2>💬 Chat</h2>
+      <div id="chat-messages" class="chat-messages"></div>
+      <div class="chat-input-container">
+        <input type="text" id="chat-input" placeholder="Type a message..." />
+        <button id="send-btn" class="btn btn-primary">Send</button>
+        <button id="refresh-btn" class="btn btn-secondary">↻</button>
+      </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section id="upload-section" class="section hidden">
+      <h2>📤 Upload Game</h2>
+      <div class="upload-container">
+        <input type="file" id="game-file" accept=".js,.html,.wasm" multiple />
+        <input type="text" id="game-name" placeholder="Game name (optional)" />
+        <button id="upload-btn" class="btn btn-primary">Upload & Host</button>
+      </div>
+      <div id="upload-status" class="status-message"></div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games-section" class="section hidden">
+      <h2>🎯 Your Games</h2>
+      <button id="refresh-games-btn" class="btn btn-secondary">Refresh List</button>
+      <div id="games-list" class="games-list"></div>
+    </section>
+  </div>
+
+  <script src="https://js.puter.com/v2/"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

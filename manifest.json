@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Puter Game Hub",
+  "version": "1.0.0",
+  "description": "Login, chat with others, and upload/play client-side games using Puter.js",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.puter.com/*",
+    "https://*.puter.site/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' https://js.puter.com; object-src 'self'"
+  }
+}
